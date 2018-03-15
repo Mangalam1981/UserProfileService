@@ -11,8 +11,12 @@ public class UserProfileService {
 	@Autowired
 	UserProfileRepo profileRepo;
 	
-	public User getUserByEmail(String email,String password) {
+	public User getUserByEmail(String email,String password) throws Exception {
 		return profileRepo.findUserByEmail(email,password);
+	}
+	
+	public String addNewUser(User user) {
+		return profileRepo.addNewUser(user);
 	}
 	
 }

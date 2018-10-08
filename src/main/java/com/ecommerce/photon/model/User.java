@@ -1,13 +1,10 @@
 package com.ecommerce.photon.model;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "userProfile")
 public class User {
-
-	
 
     private String username;
     
@@ -15,8 +12,6 @@ public class User {
     private String email;
     
     private String password;
-
-	
 
 	public String getUsername() {
 		return username;
@@ -46,6 +41,4 @@ public class User {
 	public String toString() {
 		return "User [username=" + username + ", email=" + email + ", password=" + password + "]";
 	}
-    
-    
 }

@@ -32,7 +32,6 @@ public class UserProfileRepoImpl implements UserProfileRepo {
 
     @Override
     public String addNewUser(User user) {
-
         try {
             mongoTemplate.insert(user);
             return  "User created successfully";

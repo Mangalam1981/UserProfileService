@@ -19,7 +19,7 @@ public class UserProfileServiceApplicationTests {
     UserProfileRepoImpl userProfileRepoImpl; 
 	
 	@Test
-	public void userName() {	    
+	public void userName() { 
 	    try {
 	        String email = "mohan@test.com";
 	        String password = "mohan@123";

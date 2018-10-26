@@ -24,9 +24,7 @@ public class UserProfileRepoImpl implements UserProfileRepo {
         if (users != null && !users.isEmpty()) {
             return users.get(0);
         }else {
-
             throw new Exception();
-
         }
     }
 

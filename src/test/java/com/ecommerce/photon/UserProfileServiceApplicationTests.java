@@ -14,22 +14,21 @@ import com.ecommerce.photon.repo.UserProfileRepoImpl;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserProfileServiceApplicationTests {
-        
+
     @Autowired
     UserProfileRepoImpl userProfileRepoImpl; 
-	
-	@Test
-	public void userName() { 
-	    try {
-	        String email = "mohan@test.com";
-	        String password = "mohan@123";
-	        User emailPassword = userProfileRepoImpl.findUserByEmail(email, password);
-	        System.out.println("emailPassword===================>" + emailPassword);
+
+    @Test
+    public void userName() { 
+        try {
+            String email = "mohan@test.com";
+            String password = "mohan@123";
+            User emailPassword = userProfileRepoImpl.findUserByEmail(email, password);
             assertEquals(email, emailPassword.getEmail());
         } catch (Exception e) {
             e.printStackTrace();
         }
-	    
-	}
+
+    }
 
 }

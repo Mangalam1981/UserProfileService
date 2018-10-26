@@ -18,14 +18,11 @@ public class UserProfileController {
 	
 	@RequestMapping(method=RequestMethod.GET,value="/getUser")
 	public User getUser(@RequestParam String email,@RequestParam String password) throws Exception {
-		System.out.println("From Controller========>Email==========>"+email);
-		System.out.println("From Controller========>password==========>"+password);
 		return service.getUserByEmail(email, password);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST,value="/registerNewUser")
 	public String registerNewUser(@RequestBody User user) {
-		System.out.println("From Controller=======>New User=========>"+user.toString());
 		return service.addNewUser(user);
 	}
 }
